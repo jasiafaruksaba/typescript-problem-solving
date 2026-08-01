@@ -1,0 +1,24 @@
+{
+  "name": "typescript-problem-solving",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasiafaruksaba/typescript-problem-solving.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jasiafaruksaba/typescript-problem-solving/issues"
+  },
+  "homepage": "https://github.com/jasiafaruksaba/typescript-problem-solving#readme",
+  "devDependencies": {
+    "tsx": "^4.23.1",
+    "typescript": "^7.0.2"
+  }
+}
