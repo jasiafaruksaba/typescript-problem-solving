@@ -21,3 +21,22 @@ const checkEvenOdd = (num: number): string =>{
 };
 
 console.log(checkEvenOdd(7));
+
+
+// ================================
+// Problem 03: Find Largest Number
+// ================================
+
+const findLargest = (numbers: number[]): number => {
+    let largest = numbers[0];
+
+    for (const number of numbers) {
+        if (number > largest){
+            largest = number;
+        }
+    }
+
+    return largest;
+};
+
+console.log(findLargest([10, 5, 25, 8, 15]));
