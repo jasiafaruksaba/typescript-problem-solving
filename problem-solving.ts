@@ -40,3 +40,22 @@ const findLargest = (numbers: number[]): number => {
 };
 
 console.log(findLargest([10, 5, 25, 8, 15]));
+
+
+// ================================
+// Problem 04: Remove Duplicates
+// ================================
+
+const removeDuplicates = (numbers: number[]): number[] => {
+  const result: number[] = [];
+
+  for (const number of numbers) {
+    if (!result.includes(number)) {
+      result.push(number);
+    }
+  }
+
+  return result;
+};
+
+console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
