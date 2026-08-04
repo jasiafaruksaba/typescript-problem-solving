@@ -62,7 +62,7 @@ console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
 
 
 // ================================
-// Problem 06: Check Palindrome
+// Problem 05: Check Palindrome
 // ================================
 
 const isPalindrome = (str: string): boolean => {
@@ -73,3 +73,26 @@ const isPalindrome = (str: string): boolean => {
 
 console.log(isPalindrome("madam"));
 console.log(isPalindrome("hello"));
+
+
+// ==========================================
+// Problem 06: Find the Second Largest Number
+// ===========================================
+
+const findSecondLargest = (numbers: number[]): number => {
+  let largest = -Infinity;
+  let secondLargest = -Infinity;
+
+  for (const number of numbers) {
+    if (number > largest) {
+      secondLargest = largest;
+      largest = number;
+    } else if (number > secondLargest && number !== largest) {
+      secondLargest = number;
+    }
+  }
+
+  return secondLargest;
+};
+
+console.log(findSecondLargest([10, 5, 25, 8, 15]));
