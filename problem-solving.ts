@@ -59,3 +59,17 @@ const removeDuplicates = (numbers: number[]): number[] => {
 };
 
 console.log(removeDuplicates([1, 2, 2, 3, 4, 4, 5]));
+
+
+// ================================
+// Problem 06: Check Palindrome
+// ================================
+
+const isPalindrome = (str: string): boolean => {
+  const reversed = str.split("").reverse().join("");
+
+  return str === reversed;
+};
+
+console.log(isPalindrome("madam"));
+console.log(isPalindrome("hello"));
