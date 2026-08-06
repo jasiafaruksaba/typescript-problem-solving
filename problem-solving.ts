@@ -96,3 +96,21 @@ const findSecondLargest = (numbers: number[]): number => {
 };
 
 console.log(findSecondLargest([10, 5, 25, 8, 15]));
+
+
+// ==========================================
+// Problem 07: Factorial of a Number
+// ===========================================
+
+const factorial = (n: number): number => {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+
+  return result;
+};
+
+console.log(factorial(5));
+
