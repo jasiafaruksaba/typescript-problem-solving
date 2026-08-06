@@ -134,3 +134,26 @@ const isPrime = (n: number): boolean => {
 
 console.log(isPrime(7));
 console.log(isPrime(10));
+
+// ==========================================
+// Problem 08: Fibonacci Sequence
+// ===========================================
+
+const fibonacci = (n: number): number[] => {
+  const result: number[] = [];
+
+  let a = 0;
+  let b = 1;
+
+  for (let i = 0; i < n; i++) {
+    result.push(a);
+
+    const next = a + b;
+    a = b;
+    b = next;
+  }
+
+  return result;
+};
+
+console.log(fibonacci(7));
