@@ -157,3 +157,51 @@ const fibonacci = (n: number): number[] => {
 };
 
 console.log(fibonacci(7));
+
+
+// =======================================================
+// Problem 09: Tuple তৈরি করো [string, number, boolean]
+// ========================================================
+
+let userInfo: [string, number, boolean] = ["Jasia", 20, true];
+
+console.log(userInfo);
+
+
+// =======================================================
+// Problem 10: enum তৈরি করো — Admin, User, Guest
+// ========================================================
+enum Role {
+  Admin = "ADMIN",
+  User = "USER",
+  Guest = "GUEST",
+}
+
+let userRole: Role = Role.Admin;
+
+console.log(userRole);
+
+// =======================================================
+// Problem 11: string | number union type ব্যবহার করো
+// ========================================================
+let userId: string | number;
+
+userId = 101;
+console.log(userId);
+
+userId = "USER-101";
+console.log(userId);
+
+// =======================================================
+// Problem 12: typeof ব্যবহার করে union type handle করো
+// ========================================================
+function processValue(value: string | number): void {
+  if (typeof value === "string") {
+    console.log("String value:", value.toUpperCase());
+  } else {
+    console.log("Number value:", value * 2);
+  }
+}
+
+processValue("hello");
+processValue(10);
