@@ -195,7 +195,7 @@ console.log(userId);
 // =======================================================
 // Problem 12: typeof ব্যবহার করে union type handle করো
 // ========================================================
-function processValue(value: string | number): void {
+{function processValue(value: string | number): void {
   if (typeof value === "string") {
     console.log("String value:", value.toUpperCase());
   } else {
@@ -204,4 +204,99 @@ function processValue(value: string | number): void {
 }
 
 processValue("hello");
-processValue(10);
+processValue(10);}
+
+// =======================================================
+// Problem 13: Second Largest Number
+// ========================================================
+
+{const numbers: number[] = [10, 5, 8, 20, 15];
+
+const uniqueNumbers = [...new Set(numbers)];
+uniqueNumbers.sort((a, b) => b - a);
+
+console.log(uniqueNumbers[1]);}
+
+// =======================================================
+// Problem 14:Second Smallest Number
+// ========================================================
+
+{const numbers: number[] = [10, 5, 8, 20, 15];
+
+const uniqueNumbers = [...new Set(numbers)];
+uniqueNumbers.sort((a, b) => a - b);
+
+console.log(uniqueNumbers[1]);}
+
+// =======================================================
+// Problem 15: প্রতিটি Number কতবার আছে — Object ব্যবহার করে
+// ========================================================
+
+{const numbers: number[] = [2, 3, 2, 5, 3, 2, 7, 5];
+
+const count: { [key: number]: number } = {};
+
+for (const num of numbers) {
+  if (count[num]) {
+    count[num]++;
+  } else {
+    count[num] = 1;
+  }
+}
+
+console.log(count);}
+
+// =======================================================
+// Problem 16: সবচেয়ে বেশি বার আসা Number
+// ========================================================
+
+{const numbers: number[] = [2, 3, 2, 5, 3, 2, 7, 5];
+
+const count: { [key: number]: number } = {};
+
+for (const num of numbers) {
+  count[num] = (count[num] || 0) + 1;
+}
+
+let mostFrequentNumber: number = numbers[0];
+let maxCount: number = 0;
+
+for (const num in count) {
+  if (count[num] > maxCount) {
+    maxCount = count[num];
+    mostFrequentNumber = Number(num);
+  }
+}
+
+console.log(mostFrequentNumber);}
+
+// =======================================================
+// Problem 17: String-এর প্রতিটি Character কতবার আছে
+// ========================================================
+
+{const text: string = "typescript";
+
+const count: { [key: string]: number } = {};
+
+for (const char of text) {
+  count[char] = (count[char] || 0) + 1;
+}
+
+console.log(count);}
+
+// =======================================================
+// Problem 18: reverse() ছাড়া String Reverse
+// ========================================================
+
+{
+  const text: string = "hello";
+
+let reversed: string = "";
+
+for (let i = text.length - 1; i >= 0; i--) {
+  reversed += text[i];
+}
+
+console.log(reversed);
+}
+
